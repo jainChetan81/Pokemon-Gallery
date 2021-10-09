@@ -5,13 +5,13 @@ import styles from "../styles/Home.module.css";
 import { Pokemon, PokemonUrl } from "../types";
 
 const Home = ({ pokemon }: any) => (
-	<Layout /* title="NextJS Pokedex" */>
+	<Layout title="NextJS Pokedex">
 		<h1 className="text-4xl mb-8 text-center dark">The Next Pokedex</h1>
 		<ul className={styles.photo_grid}>
 			{pokemon.map(({ name, url, image }: Pokemon, index: number) => (
-				<Link href={`/pokemon?id=${index + 1}`}>
+				<Link href={`/pokemon/${index + 1}`} key={`${pokemon.name}-${index}`}>
 					<a>
-						<PokemonCard key={`${pokemon.name}-${index}`} name={name} url={url} image={image} />
+						<PokemonCard name={name} url={url} image={image} />
 					</a>
 				</Link>
 			))}

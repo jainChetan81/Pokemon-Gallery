@@ -1,9 +1,10 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
+import { LayoutType } from "../types";
 
-function Home({ title, keywords, description, children }: any) {
+function Home({ title, keywords, description, children }: LayoutType) {
 	return (
-		<div>
+		<>
 			<Head>
 				<title>{title}</title>
 				<meta name="description" content={description} />
@@ -13,13 +14,13 @@ function Home({ title, keywords, description, children }: any) {
 			</Head>
 
 			<main className="container mx-auto">{children}</main>
-		</div>
+		</>
 	);
 }
 Home.defaultProps = {
 	title: "Quiz App",
 	description: "Quiz app by Next js created by Chetan Jain",
-	keywords: "[NextJs, Quiz, Styled Component]",
+	keywords: "[NextJs, Pokemon, Tailwind, Axios, Jest, Cypress]",
 };
 Home.propTypes = {
 	title: PropTypes.string,
