@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getPokemons } from "../api/pokemons";
 import Layout from "../components/Layout";
 import PokemonCard from "../components/PokemonCard";
 import styles from "../styles/Home.module.css";
@@ -21,14 +22,7 @@ const Home = ({ pokemon }: any) => (
 
 export async function getStaticProps() {
 	try {
-		const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=20");
-		const { results } = await res.json();
-		const pokemon: Array<Pokemon> = results.map((pokeman: PokemonUrl, index: number) => {
-			const paddedId: String = `00${index + 1}`.slice(-3);
-
-			const image: string = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${paddedId}.png`;
-			return { ...pokeman, image };
-		});
+		const pokemon: PokemonUrl[] = await getPokemons(20);
 		return {
 			props: { pokemon },
 		};

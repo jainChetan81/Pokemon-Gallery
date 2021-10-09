@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Layout from "../../components/Layout";
 import { PokemonUrl } from "../../types";
+import { getPokemonDetail, getPokemons } from "../../api/pokemons";
 
 const PokemonDetails = ({ pokeman }: any) => (
 	<Layout title={pokeman.name}>
@@ -33,10 +34,7 @@ const PokemonDetails = ({ pokeman }: any) => (
 export async function getStaticProps({ params }: any) {
 	const { id }: any = params;
 	try {
-		const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-		const pokeman = await res.json();
-		const paddedId: string = `00${id}`.slice(-3);
-		pokeman.image = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${paddedId}.png`;
+		const pokeman: any = await getPokemonDetail(id);
 		return {
 			props: { pokeman },
 		};
@@ -46,9 +44,8 @@ export async function getStaticProps({ params }: any) {
 }
 
 export async function getStaticPaths() {
-	const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=20`);
-	const { results } = await res.json();
-	const paths: Array<number> = results.map((pokemon: PokemonUrl, index: number) => ({
+	const pokemon: PokemonUrl[] = await getPokemons(20);
+	const paths: Array<Object> = pokemon.map((pokemon: PokemonUrl, index: number) => ({
 		params: { id: index.toString() },
 	}));
 	return {
