@@ -12,6 +12,17 @@
 /.next/
 /out/
 
+#PWA
+sw.js
+**/sw.js
+public/sw.js
+./public/sw.js
+
+sw.js.map
+**/sw.js.map
+public/sw.js.map
+./public/sw.js.map
+
 # vscode
 /.vscode/
 .vscode
