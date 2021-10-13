@@ -6,7 +6,7 @@ import { Pokemon } from "../types";
 const PokemonCard = ({ name, url, image }: Pokemon) => {
 	const [showName, setShowName] = useState(false);
 	return (
-		<li
+		<div
 			onMouseEnter={() => setShowName(true)}
 			onMouseLeave={() => setShowName(false)}
 			className={`${styles.card} bg-gray-300`}
@@ -15,7 +15,7 @@ const PokemonCard = ({ name, url, image }: Pokemon) => {
 			}}
 		>
 			{showName && name}
-		</li>
+		</div>
 	);
 };
 

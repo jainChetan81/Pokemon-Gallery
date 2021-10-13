@@ -1,8 +1,7 @@
-import React from "react";
 import Link from "next/link";
+import { getPokemonDetail, getPokemons } from "../../api";
 import Layout from "../../components/Layout";
 import { PokemonUrl } from "../../types";
-import { getPokemonDetail, getPokemons } from "../../api/pokemons";
 
 const PokemonDetails = ({ pokeman }: any) => (
 	<Layout title={pokeman.name}>
@@ -44,7 +43,7 @@ export async function getStaticProps({ params }: any) {
 }
 
 export async function getStaticPaths() {
-	const pokemon: PokemonUrl[] = await getPokemons(20);
+	const pokemon: PokemonUrl[] = (await getPokemons(20)) || [];
 	const paths: Array<Object> = pokemon.map((pokemon: PokemonUrl, index: number) => ({
 		params: { id: index.toString() },
 	}));
