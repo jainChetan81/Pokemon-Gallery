@@ -7,7 +7,6 @@ import { Pokemon, PokemonUrl } from "../types";
 
 const Home = ({ pokemon }: any) => (
 	<Layout title="NextJS Pokedex">
-		<h1 className="text-4xl mb-8 text-center dark">The Next Pokedex</h1>
 		<div className={styles.photo_grid}>
 			{pokemon.map(({ name, url, image }: Pokemon, index: number) => (
 				<article key={`${pokemon.name}-${index}`}>
@@ -34,8 +33,10 @@ export async function getStaticProps() {
 }
 export default Home;
 
-// TODO: react testing library
 // TODO: cypress
 // TODO: witherrorHandler for axios
-// TODO: add types to api
+// TODO: add types to pokemon details api
 // TODO: fixme:ensure pokemon details page is part of SPA
+// TODO: PWA
+// TODO: infinite scrolling for pokemon list
+// TODO: tdd while using framer-motion

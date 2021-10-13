@@ -14,7 +14,7 @@ class MyDocument extends Document {
 					<meta name="mobile-web-app-capable" content="yes" />
 					<meta name="apple-mobile-web-app-capable" content="yes" />
 					<meta name="apple-mobile-web-app-status-bar-style" content="default" />
-					<meta name="apple-mobile-web-app-title" content="Quiz App" />
+					<meta name="apple-mobile-web-app-title" content="Pokedox App" />
 					<link
 						rel="apple-touch-icon"
 						href="https://ik.imagekit.io/aqaseg5nkl6/pokeball.png?tr=w-200,h-200"
@@ -22,17 +22,17 @@ class MyDocument extends Document {
 					<link rel="shortcut icon" href="https://ik.imagekit.io/aqaseg5nkl6/pokeball.png?tr=w-200,h-200" />
 					<meta name="twitter:card" content="summary" />
 					<meta name="twitter:url" content="https://type-script-next-pwa.vercel.app" />
-					<meta name="twitter:title" content="Quiz App" />
-					<meta name="twitter:description" content="Quiz app by Next js created by Chetan Jain" />
+					<meta name="twitter:title" content="Pokedox App" />
+					<meta name="twitter:description" content="Pokedox by Next js created by Chetan Jain" />
 					<meta
 						name="twitter:image"
 						content="https://ik.imagekit.io/aqaseg5nkl6/pokeball.png?tr=w-200,h-200"
 					/>
 					<meta name="twitter:creator" content="@DavidWShadow" />
 					<meta property="og:type" content="website" />
-					<meta property="og:title" content="Quiz App" />
-					<meta property="og:description" content="Quiz app by Next js created by Chetan Jain" />
-					<meta property="og:site_name" content="Quiz App" />
+					<meta property="og:title" content="Pokedox App" />
+					<meta property="og:description" content="Pokedox by Next js created by Chetan Jain" />
+					<meta property="og:site_name" content="Pokedox App" />
 					<meta property="og:url" content="https://type-script-next-pwa.vercel.app" />
 					<meta
 						property="og:image"

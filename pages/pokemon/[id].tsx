@@ -18,8 +18,10 @@ const PokemonDetails = ({ pokeman }: any) => (
 				{pokeman.height}
 			</p>
 			<h2 className="text-2xl mt-6 mb-2">Types</h2>
-			{pokeman.types.map((type: any, index: number) => (
-				<p key={index}>{type.name}</p>
+			{pokeman.types.map(({ type, slot }: any) => (
+				<p key={`${type.name}-${slot}`}>
+					{slot} {type.name}
+				</p>
 			))}
 			<p className="mt-10 text-center">
 				<Link href="/">

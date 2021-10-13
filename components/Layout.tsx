@@ -1,6 +1,7 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
 import { LayoutType } from "../types";
+import Header from "./Header";
 
 function Home({ title, keywords, description, children }: LayoutType) {
 	return (
@@ -12,14 +13,14 @@ function Home({ title, keywords, description, children }: LayoutType) {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="manifest" href="manifest.json" />
 			</Head>
-
+			<Header title={title} />
 			<main className="container mx-auto">{children}</main>
 		</>
 	);
 }
 Home.defaultProps = {
-	title: "Quiz App",
-	description: "Quiz app by Next js created by Chetan Jain",
+	title: "Pokedox App",
+	description: "Pokedox by Next js created by Chetan Jain",
 	keywords: "[NextJs, Pokemon, Tailwind, Axios, Jest, Cypress]",
 };
 Home.propTypes = {
