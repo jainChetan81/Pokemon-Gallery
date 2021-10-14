@@ -1,6 +1,7 @@
 .header_container {
 	display: flex;
-	padding: 40px;
+	padding-block: 40px;
+	padding-inline: min(40px, 2vw);
 	align-items: center;
 }
 .header_title {

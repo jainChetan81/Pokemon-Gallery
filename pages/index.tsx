@@ -36,6 +36,5 @@ export default Home;
 // TODO: cypress
 // TODO: witherrorHandler for axios
 // TODO: fixme:ensure pokemon details page is part of SPA
-// TODO: PWA
 // TODO: infinite scrolling for pokemon list //fallback: pagination for pokemon lists
 // TODO: tdd while using framer-motion

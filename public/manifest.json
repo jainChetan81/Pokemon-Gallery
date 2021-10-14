@@ -3,6 +3,8 @@
 	"background_color": "#131313",
 	"display": "standalone",
 	"scope": "/",
+	"lang": "en-US",
+	"orientation": "any",
 	"start_url": "/",
 	"name": "Pokedox App",
 	"short_name": "pokedox",

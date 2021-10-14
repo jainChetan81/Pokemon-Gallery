@@ -4,7 +4,8 @@
 		"prettier",
 		"plugin:jsx-a11y/recommended",
 		"plugin:react-hooks/recommended",
-		"plugin:import/typescript"
+		"plugin:import/typescript",
+		"eslint-config-next"
 	],
 	"parser": "babel-eslint",
 	"parserOptions": {
