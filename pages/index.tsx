@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 import { Pokemon, PokemonUrl } from "../types";
 
 const Home = ({ pokemon }: any) => (
-	<Layout title="NextJS Pokedex">
+	<Layout title="Pokedex | Home">
 		<div className={styles.photo_grid}>
 			{pokemon.map(({ name, url, image }: Pokemon, index: number) => (
 				<article key={`${pokemon.name}-${index}`}>
@@ -35,8 +35,7 @@ export default Home;
 
 // TODO: cypress
 // TODO: witherrorHandler for axios
-// TODO: add types to pokemon details api
 // TODO: fixme:ensure pokemon details page is part of SPA
 // TODO: PWA
-// TODO: infinite scrolling for pokemon list
+// TODO: infinite scrolling for pokemon list //fallback: pagination for pokemon lists
 // TODO: tdd while using framer-motion

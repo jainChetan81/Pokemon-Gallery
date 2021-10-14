@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 import { PokemonUrl } from "../../types";
 
 const PokemonDetails = ({ pokeman }: any) => (
-	<Layout title={pokeman.name}>
+	<Layout title={`Pokedox | ${pokeman.name}`}>
 		<div className="container mx-auto max-w-xl pt-8 min-h-screen">
 			<h1 className="text-4xl mb-2 text-center capitalize">
 				{pokeman.id}. {pokeman.name}
