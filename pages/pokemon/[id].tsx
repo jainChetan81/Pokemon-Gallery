@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getPokemonDetail, getPokemons } from "../../api";
 import Layout from "../../components/Layout";
 import { PokemonUrl } from "../../types";
@@ -9,7 +10,7 @@ const PokemonDetails = ({ pokeman }: any) => (
 			<h1 className="text-4xl mb-2 text-center capitalize">
 				{pokeman.id}. {pokeman.name}
 			</h1>
-			<img className="mx-auto" src={pokeman.image} alt={pokeman.name} />
+			<Image src={pokeman.image} alt={pokeman.name} width={500} height={500} />
 			<p>
 				<span className="font-bold mr-2">Weight:</span> {pokeman.weight}
 			</p>
@@ -31,7 +32,6 @@ const PokemonDetails = ({ pokeman }: any) => (
 		</div>
 	</Layout>
 );
-
 export async function getStaticProps({ params }: any) {
 	const { id }: any = params;
 	try {

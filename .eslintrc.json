@@ -5,7 +5,8 @@
 		"plugin:jsx-a11y/recommended",
 		"plugin:react-hooks/recommended",
 		"plugin:import/typescript",
-		"eslint-config-next"
+		"eslint-config-next",
+		"next/core-web-vitals"
 	],
 	"parser": "babel-eslint",
 	"parserOptions": {
