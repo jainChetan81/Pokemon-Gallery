@@ -1,0 +1,25 @@
+.header_container {
+	display: flex;
+	padding: 40px;
+	align-items: center;
+}
+.header_title {
+	flex-grow: 1;
+	margin-left: 20px;
+	border-bottom: 1px solid var(--header-border);
+	padding-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.header_container h1 {
+	font-size: clamp(1.5rem, calc(2vw + 1rem), 4rem);
+	font-weight: 900;
+}
+.header_svg {
+	width: 80px;
+	overflow: visible;
+	stroke: var(--main-color);
+	stroke-width: 4;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+}

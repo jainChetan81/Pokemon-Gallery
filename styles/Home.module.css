@@ -10,10 +10,10 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: hsla(0, 1%, 29%, 0.158);
+	background: var(--card-background);
 	font-size: 3rem;
-	color: #fff;
-	box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+	color: var(--main-color);
+	box-shadow: var(--card-box-shadow);
 	height: 100%;
 	width: 100%;
 	border-radius: 4px;
@@ -30,7 +30,6 @@
 	animation: cardEntrance 700ms ease-in-out;
 }
 .card:hover {
-	box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
 	transform: translateY(-3px) scale(1.1);
 }
 
@@ -44,15 +43,5 @@
 		opacity: 1;
 		transform: scale(1);
 		filter: hue-rotate(0deg);
-	}
-}
-/* Medium screens */
-@media screen and (min-width: 600px) {
-	.card_tall {
-		grid-row: span 2 / auto;
-	}
-
-	.card_wide {
-		grid-column: span 2 / auto;
 	}
 }

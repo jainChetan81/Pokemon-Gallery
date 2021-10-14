@@ -13,7 +13,7 @@ function Home({ title, keywords, description, children }: LayoutType) {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="manifest" href="manifest.json" />
 			</Head>
-			<Header title={title} />
+			<Header title="Pokemon Gallery" />
 			<main className="container mx-auto">{children}</main>
 		</>
 	);
@@ -21,7 +21,7 @@ function Home({ title, keywords, description, children }: LayoutType) {
 Home.defaultProps = {
 	title: "Pokedox App",
 	description: "Pokedox by Next js created by Chetan Jain",
-	keywords: "[NextJs, Pokemon, Tailwind, Axios, Jest, Cypress]",
+	keywords: "[NextJs, Pokemon, Tailwind, Axios, Jest, Cypress, React Testing Library]",
 };
 Home.propTypes = {
 	title: PropTypes.string,
