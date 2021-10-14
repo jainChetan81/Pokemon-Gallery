@@ -39,4 +39,3 @@ export default Home;
 // TODO: PWA
 // TODO: infinite scrolling for pokemon list //fallback: pagination for pokemon lists
 // TODO: tdd while using framer-motion
-// "react-test-renderer": "^17.0.2",

@@ -10,6 +10,8 @@ module.exports = {
 		"!**/types/**",
 		"!**/*.config.js",
 		"!**/*.setup.js",
+		"!**/pages/**",
+		"!**/Layout.tsx",
 	],
 	moduleNameMapper: {
 		/* Handle CSS imports (with CSS modules)
