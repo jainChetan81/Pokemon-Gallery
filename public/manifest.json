@@ -1,0 +1,32 @@
+{
+	"theme_color": "#ffffff",
+	"background_color": "#131313",
+	"display": "standalone",
+	"scope": "/",
+	"start_url": "/",
+	"name": "Pokedox App",
+	"short_name": "pokedox",
+	"description": "A gallery of various Pokemons",
+	"icons": [
+		{
+			"src": "https://ik.imagekit.io/aqaseg5nkl6/pokeball.png?tr=w-192,h-192,f-png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "https://ik.imagekit.io/aqaseg5nkl6/pokeball.png?tr=w-256,h-256,f-png",
+			"sizes": "256x256",
+			"type": "image/png"
+		},
+		{
+			"src": "https://ik.imagekit.io/aqaseg5nkl6/pokeball.png?tr=w-384,h-384,f-png",
+			"sizes": "384x384",
+			"type": "image/png"
+		},
+		{
+			"src": "https://ik.imagekit.io/aqaseg5nkl6/pokeball.png?tr=w-512,h-512,f-png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}

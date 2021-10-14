@@ -1,16 +1,14 @@
-// const withPWA = require("next-pwa");
+const withPWA = require("next-pwa");
 
-module.exports = {
+module.exports = withPWA({
+	pwa: {
+		dest: "public",
+		register: true,
+		skipWaiting: true,
+		// disable: process.env.NODE_ENV === "development",
+	},
 	reactStrictMode: true,
 	images: {
 		domains: ["res.imagekit.io"],
 	},
-};
-
-// module.exports = withPWA({
-// 	pwa: {
-// 		dest: "public",
-// 		register: true,
-// 		skipWaiting: true,
-// 	},
-// });
+});

@@ -20,7 +20,7 @@ function Home({ title, keywords, description, children }: LayoutType) {
 }
 Home.defaultProps = {
 	title: "Pokedox App",
-	description: "Pokedox by Next js created by Chetan Jain",
+	description: "A gallery of various Pokemons",
 	keywords: "[NextJs, Pokemon, Tailwind, Axios, Jest, Cypress, React Testing Library]",
 };
 Home.propTypes = {
