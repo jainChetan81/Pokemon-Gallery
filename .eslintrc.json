@@ -25,6 +25,7 @@
 	},
 	"rules": {
 		"react-hooks/rules-of-hooks": "error",
+		"@next/next/no-document-import-in-page": "off",
 		"no-debugger": 0,
 		"no-alert": 0,
 		"no-unused-vars": 1,
