@@ -10,7 +10,7 @@ const PokemonCard = ({ name, image, index }: Pokemon) => {
 		<article
 			onMouseEnter={() => setShowName(true)}
 			onMouseLeave={() => setShowName(false)}
-			className={`${styles.card} bg-gray-300`}
+			className={styles.card}
 			data-testid="pokemon-card"
 			style={{
 				backgroundImage: `url(${image})`,

@@ -6,8 +6,8 @@ describe("Utilities test", () => {
 		expect(divElement).toBe("002");
 	});
 	it("should return incremented padded string when a double digit is provided", async () => {
-		const divElement = paddedString(22, 3);
-		expect(divElement).toBe("023");
+		const divElement = paddedString(36, 3);
+		expect(divElement).toBe("037");
 	});
 	it("should return incremented string when triple digit is provided", async () => {
 		const divElement = paddedString(223, 3);
