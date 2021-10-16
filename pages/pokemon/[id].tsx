@@ -3,9 +3,10 @@ import Image from "next/image";
 import { getPokemonDetail, getPokemons } from "../../api";
 import Layout from "../../components/Layout";
 import { PokemonUrl } from "../../types";
+import { POKEMON_FIRST_LIMIT } from "../../constants";
 
 const PokemonDetails = ({ pokeman }: any) => (
-	<Layout title={`Pokedox | ${pokeman.name}`}>
+	<Layout title={`Pokedox | ${pokeman?.name}`}>
 		<div className="container mx-auto max-w-xl pt-8 min-h-screen">
 			<h1 className="text-4xl mb-2 text-center capitalize">
 				{pokeman.id}. {pokeman.name}
@@ -38,6 +39,7 @@ export async function getStaticProps({ params }: any) {
 		const pokeman: any = await getPokemonDetail(id);
 		return {
 			props: { pokeman },
+			revalidate: 100,
 		};
 	} catch (err) {
 		console.error(err);
@@ -45,13 +47,13 @@ export async function getStaticProps({ params }: any) {
 }
 
 export async function getStaticPaths() {
-	const pokemon: PokemonUrl[] = (await getPokemons(20)) || [];
+	const pokemon: PokemonUrl[] = (await getPokemons(0, POKEMON_FIRST_LIMIT)) || [];
 	const paths: Array<Object> = pokemon.map((pokemon: PokemonUrl, index: number) => ({
-		params: { id: index.toString() },
+		params: { id: (index + 1).toString() },
 	}));
 	return {
 		paths,
-		fallback: false,
+		fallback: "blocking", // TODO: try with true
 	};
 }
 
