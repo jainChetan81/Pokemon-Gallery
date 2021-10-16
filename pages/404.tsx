@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { FC } from "react";
 import Layout from "../components/Layout";
 
-const NotFound = (): any => (
+const NotFound: FC = () => (
 	<Layout title="Pokedex | 404">
 		<div className=" min-h-screen px-4 py-16 sm:px-6 sm:py-10 md:grid lg:px-8">
 			<div className="max-w-max mx-auto">

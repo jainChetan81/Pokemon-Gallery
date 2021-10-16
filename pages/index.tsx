@@ -1,13 +1,17 @@
-import { useCallback, useRef, useState } from "react";
+import { FC, useCallback, useRef, useState } from "react";
 import { getPokemons } from "../api";
 import usePagination from "../components/hooks/usePagination";
 import Layout from "../components/Layout";
+import Modal from "../components/Modal";
 import PokemonCard from "../components/PokemonCard";
 import { POKEMON_FIRST_LIMIT, POKEMON_INCREASE_LIMIT } from "../constants";
 import styles from "../styles/Home.module.css";
 import { Pokemon } from "../types";
+type Props = {
+	firstPokemons: Pokemon[];
+};
 
-const Home = ({ firstPokemons }: any) => {
+const Home: FC<Props> = ({ firstPokemons }) => {
 	const [pokemons, setPokemons] = useState<Pokemon[]>([...firstPokemons]);
 	const [offset, setOffset] = useState<number>(0);
 	const { loading, error, hasMore } = usePagination(offset, POKEMON_INCREASE_LIMIT, pokemons, setPokemons);
@@ -25,6 +29,9 @@ const Home = ({ firstPokemons }: any) => {
 		},
 		[loading, hasMore]
 	);
+	if (pokemons.length === 0) {
+		return <Modal show={true} onClose={() => location.reload()} title="Please check your internet connection" />;
+	}
 	return (
 		<Layout title={`Pokedox | Home(${pokemons.length.toString()})`}>
 			<div className={styles.photo_grid}>

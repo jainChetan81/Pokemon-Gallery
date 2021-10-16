@@ -1,11 +1,11 @@
-import styles from "../styles/Toggle.module.css";
 import PropTypes from "prop-types";
+import styles from "../styles/Toggle.module.css";
 
 const ToggleButton = ({ clicked }: any) => (
-	<div onClick={clicked} className={styles.toggle}>
+	<div onMouseDown={clicked} className={styles.toggle}>
 		<input type="checkbox" className={styles.checkbox} aria-label="Toggle Dark Mode" />
-		<div className={styles.knobs}></div>
-		<div className={styles.layer}></div>
+		<div className={styles.knobs} />
+		<div className={styles.layer} />
 	</div>
 );
 
