@@ -1,12 +1,13 @@
+import Link from "next/link";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
 import { Pokemon } from "../types";
 
-const PokemonCard = ({ name, image }: Pokemon) => {
+const PokemonCard = ({ name, image, index }: Pokemon) => {
 	const [showName, setShowName] = useState(false);
 	return (
-		<div
+		<article
 			onMouseEnter={() => setShowName(true)}
 			onMouseLeave={() => setShowName(false)}
 			className={`${styles.card} bg-gray-300`}
@@ -15,14 +16,17 @@ const PokemonCard = ({ name, image }: Pokemon) => {
 				backgroundImage: `url(${image})`,
 			}}
 		>
-			{showName && <h1>{name}</h1>}
-		</div>
+			<Link href={`/pokemon/${index + 1}`}>
+				<a>{showName && <h1>{name}</h1>}</a>
+			</Link>
+		</article>
 	);
 };
 
 PokemonCard.propTypes = {
 	name: PropTypes.string.isRequired,
 	image: PropTypes.string.isRequired,
+	index: PropTypes.number.isRequired,
 };
 
 export default PokemonCard;

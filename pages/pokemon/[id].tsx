@@ -45,7 +45,7 @@ export async function getStaticProps({ params }: any) {
 }
 
 export async function getStaticPaths() {
-	const pokemon: PokemonUrl[] = (await getPokemons(20)) || [];
+	const pokemon: PokemonUrl[] = (await getPokemons(0, 20)) || [];
 	const paths: Array<Object> = pokemon.map((pokemon: PokemonUrl, index: number) => ({
 		params: { id: index.toString() },
 	}));
