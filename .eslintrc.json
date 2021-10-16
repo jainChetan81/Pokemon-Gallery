@@ -6,7 +6,8 @@
 		"plugin:react-hooks/recommended",
 		"plugin:import/typescript",
 		"eslint-config-next",
-		"next/core-web-vitals"
+		"next/core-web-vitals",
+		"plugin:cypress/recommended"
 	],
 	"parser": "babel-eslint",
 	"parserOptions": {
