@@ -61,6 +61,6 @@ export async function getStaticProps() {
 export default Home;
 
 // TODO: cypress
-// TODO: witherrorHandler for axios
+// TODO: do react testing for use pagination and modal component
 // TODO: use swr for pre fetching data
 // TODO: tdd while using framer-motion
