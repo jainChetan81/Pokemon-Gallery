@@ -5,7 +5,7 @@ import styles from "../styles/Header.module.css";
 import ToggleButton from "./ToggleButton";
 
 type Props = {
-	title: string;
+	title?: string;
 };
 
 const Header: FC<Props> = ({ title }) => {
@@ -27,7 +27,10 @@ const Header: FC<Props> = ({ title }) => {
 };
 
 Header.propTypes = {
-	title: PropTypes.string.isRequired,
+	title: PropTypes.string,
+};
+Header.defaultProps = {
+	title: "Pokedox App",
 };
 
 export default Header;

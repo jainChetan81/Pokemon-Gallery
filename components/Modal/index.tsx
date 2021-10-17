@@ -11,7 +11,7 @@ type Props = {
 	children?: any;
 };
 
-const Modal = ({ show, onClose, children, title }: any) => {
+const Modal: FC<Props> = ({ show, onClose, children, title }) => {
 	const [isBrowser, setIsBrowser] = useState(false);
 	useEffect(() => setIsBrowser(true), []);
 
@@ -21,7 +21,7 @@ const Modal = ({ show, onClose, children, title }: any) => {
 	};
 
 	const modalContent = show ? (
-		<div className={styles.overlay}>
+		<div data-testid="modal" className={styles.overlay}>
 			<div className={styles.modal}>
 				<div className={styles.header}>
 					<button type="button" onClick={handleClose}>
@@ -34,7 +34,8 @@ const Modal = ({ show, onClose, children, title }: any) => {
 		</div>
 	) : null;
 	if (isBrowser) {
-		return ReactDOM.createPortal(modalContent, document.getElementById("modal-root"));
+		const modalDiv = document.getElementById("#modal-root");
+		return ReactDOM.createPortal(modalContent, modalDiv);
 	}
 	return null;
 };
