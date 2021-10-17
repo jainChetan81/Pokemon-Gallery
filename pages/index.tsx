@@ -7,6 +7,7 @@ import PokemonCard from "../components/PokemonCard";
 import { POKEMON_FIRST_LIMIT, POKEMON_INCREASE_LIMIT } from "../constants";
 import styles from "../styles/Home.module.css";
 import { Pokemon } from "../types";
+
 type Props = {
 	firstPokemons: Pokemon[];
 };
@@ -30,7 +31,8 @@ const Home: FC<Props> = ({ firstPokemons }) => {
 		[loading, hasMore]
 	);
 	if (pokemons.length === 0) {
-		return <Modal show={true} onClose={() => location.reload()} title="Please check your internet connection" />;
+		// eslint-disable-next-line no-restricted-globals
+		return <Modal show onClose={() => location.reload()} title="Please check your internet connection" />;
 	}
 	return (
 		<Layout title={`Pokedox | Home(${pokemons.length.toString()})`}>
@@ -61,6 +63,11 @@ export async function getStaticProps() {
 export default Home;
 
 // TODO: cypress
-// TODO: do react testing for use pagination and modal component
+// TODO: do react testing for use pagination and modal component with typescript
 // TODO: use swr for pre fetching data
 // TODO: tdd while using framer-motion
+// TODO: deploy on amplify with e2e and tests
+// TODO: research for next-offline
+// TODO: research for next-page-transitions
+// TODO: create a CI/CD pipeline for deploying to AWS
+// TODO: add google analytics

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import { FC } from "react";
 import { getPokemonDetail, getPokemons } from "../../api";
 import Layout from "../../components/Layout";
 import { PokemonUrl } from "../../types";
 import { POKEMON_FIRST_LIMIT } from "../../constants";
-import { FC } from "react";
 import Modal from "../../components/Modal";
 
 type Props = {
@@ -13,7 +13,8 @@ type Props = {
 
 const PokemonDetails: FC<Props> = ({ pokeman }) => {
 	if (Object.keys(pokeman).length === 0) {
-		return <Modal show={true} onClose={() => location.reload()} title="Please check your internet connection" />;
+		// eslint-disable-next-line no-restricted-globals
+		return <Modal show onClose={() => location.reload()} title="Please check your internet connection" />;
 	}
 	return (
 		<Layout title={`Pokedox | ${pokeman?.name}`}>
@@ -21,7 +22,7 @@ const PokemonDetails: FC<Props> = ({ pokeman }) => {
 				<h1 className="text-4xl mb-2 text-center capitalize">
 					{pokeman.id}. {pokeman.name}
 				</h1>
-				<Image src={pokeman.image} alt={pokeman.name} width={500} height={500} />
+				<Image src={pokeman.image} alt={`${pokeman.name} details image`} width={500} height={500} />
 				<p>
 					<span className="font-bold mr-2">Weight:</span> {pokeman.weight}
 				</p>
