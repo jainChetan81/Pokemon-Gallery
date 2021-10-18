@@ -63,7 +63,7 @@ export async function getStaticProps() {
 export default Home;
 
 // TODO: cypress
-// TODO: do react testing for use pagination and modal component with typescript
+// TODO: do react testing  with typescript
 // TODO: use swr for pre fetching data
 // TODO: tdd while using framer-motion
 // TODO: deploy on amplify with e2e and tests
