@@ -9,16 +9,19 @@ describe("Testing pokemon API", () => {
 			data: {
 				results: [
 					{
+						index: 0,
 						name: "bulbasaur",
 						url: "https://pokeapi.co/api/v2/pokemon/1/",
 						image: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
 					},
 					{
+						index: 1,
 						name: "ivysaur",
 						url: "https://pokeapi.co/api/v2/pokemon/2/",
 						image: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png",
 					},
 					{
+						index: 2,
 						name: "venusaur",
 						url: "https://pokeapi.co/api/v2/pokemon/3/",
 						image: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png",
@@ -27,15 +30,15 @@ describe("Testing pokemon API", () => {
 			},
 		};
 		axios.get.mockResolvedValue(response);
-		const data = await getPokemons(3);
-		expect(axios.get).toHaveBeenCalledWith(`https://pokeapi.co/api/v2/pokemon?limit=3`);
+		const data = await getPokemons(0, 3);
+		expect(axios.get).toHaveBeenCalledWith(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=3`);
 		expect(data.length).toBe(3);
 		expect(data).toEqual(response.data.results);
 	});
 	it("when API call fails", async () => {
 		axios.get.mockRejectedValue(new Error("Error"));
-		expect(axios.get).toHaveBeenCalledWith(`https://pokeapi.co/api/v2/pokemon?limit=3`);
-		const data = await getPokemons(3);
+		expect(axios.get).toHaveBeenCalledWith(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=3`);
+		const data = await getPokemons(0, 3);
 		expect(data.length).toBe(0);
 	});
 });

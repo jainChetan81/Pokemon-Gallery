@@ -1,9 +1,14 @@
 import PropTypes from "prop-types";
 import { useTheme } from "next-themes";
+import { FC } from "react";
 import styles from "../styles/Header.module.css";
 import ToggleButton from "./ToggleButton";
 
-const Header = ({ title }: any) => {
+type Props = {
+	title?: string;
+};
+
+const Header: FC<Props> = ({ title }) => {
 	const { theme, setTheme } = useTheme();
 	return (
 		<header className={styles.header_container}>
@@ -25,7 +30,7 @@ Header.propTypes = {
 	title: PropTypes.string,
 };
 Header.defaultProps = {
-	title: "Welcome to Next Pokedox",
+	title: "Pokedox App",
 };
 
 export default Header;

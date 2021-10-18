@@ -31,7 +31,7 @@ class MyDocument extends Document {
 						name="twitter:image"
 						content="https://ik.imagekit.io/aqaseg5nkl6/pokeball.png?tr=w-212,h-212,f-png"
 					/>
-					<meta name="twitter:creator" content="@DavidWShadow" />
+					<meta name="twitter:creator" content="@jainChetan81" />
 					<meta property="og:type" content="website" />
 					<meta property="og:title" content="Pokedox App" />
 					<meta property="og:description" content="Pokedox by Next js created by Chetan Jain" />
@@ -45,6 +45,7 @@ class MyDocument extends Document {
 				<body>
 					<Main />
 					<NextScript />
+					<div id="modal-root" />
 				</body>
 			</Html>
 		);

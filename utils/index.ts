@@ -1,5 +1,5 @@
-const paddedString = (index: number, length: number): string => {
-	if (index > length * 10) return (index + 1).toString();
-	return `00${index + 1}`.slice(-length);
+const paddedString = (num: number, length: number): string => {
+	if (num > length * 100) return (num + 1).toString();
+	return `00${num + 1}`.slice(-length);
 };
 export default paddedString;

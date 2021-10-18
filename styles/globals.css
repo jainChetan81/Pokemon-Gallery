@@ -33,3 +33,6 @@ body {
 	background: var(--background-color);
 	color: var(--main-color);
 }
+main {
+	text-align: center;
+}
