@@ -38,7 +38,11 @@ const Home: FC<Props> = ({ firstPokemons }) => {
 		<Layout title={`Pokedox | Home(${pokemons.length.toString()})`}>
 			<div className={styles.photo_grid}>
 				{pokemons.map(({ name, image }: Pokemon, index: number) => (
-					<div ref={pokemons.length === index + 1 ? lastBookElementRef : null} key={`${name}-${index}`}>
+					<div
+						data-testid="pokemon"
+						ref={pokemons.length === index + 1 ? lastBookElementRef : null}
+						key={`${name}-${index}`}
+					>
 						<PokemonCard key={`${name}-${index}`} name={name} image={image} index={index} />
 					</div>
 				))}
