@@ -13,4 +13,5 @@ module.exports = withPWA({
 		minimumCacheTTL: 60,
 		disableStaticImages: true,
 	},
+	distDir: "build",
 });

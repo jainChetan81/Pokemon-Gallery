@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import PokemonCard from "../components/PokemonCard";
 
 describe("Pokemon Card", () => {
-	beforeEach(() => render(<PokemonCard name="chetan" image="a" />));
+	beforeEach(() => render(<PokemonCard name="chetan" image="a" index={1} />));
 	it("should render the Pokemon Container", async () => {
 		const divElement = screen.getByTestId(/pokemon-card/i);
 		expect(divElement).toBeInTheDocument();

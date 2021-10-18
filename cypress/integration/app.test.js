@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 /// <reference types="Cypress" />
 
-describe("Hello world", () => {
+describe("check for basic tests", () => {
 	beforeEach(() => {
 		cy.visit("/");
 	});

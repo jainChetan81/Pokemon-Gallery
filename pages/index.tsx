@@ -66,7 +66,6 @@ export async function getStaticProps() {
 }
 export default Home;
 
-// TODO: cypress
 // TODO: do react testing  with typescript
 // TODO: use swr for pre fetching data
 // TODO: tdd while using framer-motion

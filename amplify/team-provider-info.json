@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-pokedoxgallery-dev-140048-authRole",
+            "UnauthRoleArn": "arn:aws:iam::450537788751:role/amplify-pokedoxgallery-dev-140048-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::450537788751:role/amplify-pokedoxgallery-dev-140048-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-pokedoxgallery-dev-140048-deployment",
+            "UnauthRoleName": "amplify-pokedoxgallery-dev-140048-unauthRole",
+            "StackName": "amplify-pokedoxgallery-dev-140048",
+            "StackId": "arn:aws:cloudformation:us-east-1:450537788751:stack/amplify-pokedoxgallery-dev-140048/b685a810-2fed-11ec-8491-0a0feb48b3e3",
+            "AmplifyAppId": "d1xtei0dej2p1z"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1xtei0dej2p1z",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}
