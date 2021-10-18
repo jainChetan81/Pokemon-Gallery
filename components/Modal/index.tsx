@@ -33,10 +33,7 @@ const Modal = ({ show, onClose, children, title }: any) => {
 			</div>
 		</div>
 	) : null;
-	if (isBrowser) {
-		return ReactDOM.createPortal(modalContent, document.getElementById("modal-root"));
-	}
-	return null;
+	return isBrowser ? ReactDOM.createPortal(modalContent, document.body) : null;
 };
 
 Modal.propTypes = {
