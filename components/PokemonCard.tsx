@@ -17,7 +17,7 @@ const PokemonCard = ({ name, image, index }: Pokemon) => {
 			}}
 		>
 			<Link href={`/pokemon/${index + 1}`}>
-				<a>{showName && <h1>{name}</h1>}</a>
+				<a>{showName && <h2>{name}</h2>}</a>
 			</Link>
 		</article>
 	);

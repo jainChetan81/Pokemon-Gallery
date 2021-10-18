@@ -7,12 +7,18 @@
 		"build": "next build",
 		"start": "next start",
 		"test": "jest",
-		"test:watch": "jest --watchAll --verbose --coverage"
+		"test:watch": "jest --watchAll --verbose --coverage",
+		"cypress": "cypress open",
+		"cypress:headless": "cypress run",
+		"e2e": "start-server-and-test start http://localhost:3000 cypress",
+		"e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless"
 	},
 	"dependencies": {
 		"@types/node": "9.6.7",
 		"@types/react": "^17.0.29",
 		"axios": "^0.22.0",
+		"cypress": "^8.6.0",
+		"eslint-plugin-cypress": "^2.12.1",
 		"next": "^11.1.0",
 		"next-pwa": "^5.3.1",
 		"next-themes": "0.0.15",
