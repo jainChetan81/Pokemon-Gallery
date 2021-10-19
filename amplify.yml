@@ -3,12 +3,11 @@ frontend:
     phases:
         preBuild:
             commands:
-                - npm cache clean
                 - npm install
         build:
             commands:
                 # This makes sure that the commit is not deployed if the tests fail.
-                - npm run test && npm run build
+                - npm run build
     artifacts:
         baseDirectory: build
         files:
@@ -16,16 +15,10 @@ frontend:
     cache:
         paths:
             - node_modules/**/*
-
-
-
-
-# version: 0.1
-# frontend:
+# test:
 #     phases:
 #         preTest:
 #             commands:
-#                 - npm cache clean
 #                 - npm ci
 #                 - npm install wait-on
 #                 - npm install pm2
@@ -34,7 +27,6 @@ frontend:
 #                 - "npx wait-on http://localhost:3000"
 #         test:
 #             commands:
-#                 - npm run test
 #                 - 'npx cypress run --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
 #         postTest:
 #             commands:
@@ -46,7 +38,3 @@ frontend:
 #         files:
 #             - "**/*.png"
 #             - "**/*.mp4"
-# cache:
-#     paths:
-#         - public/**/*
-
