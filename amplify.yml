@@ -16,10 +16,12 @@
 #         paths:
 #             - node_modules/**/*
 
-test:
+version: 0.1
+frontend:
     phases:
         preTest:
             commands:
+                - npm cache clean
                 - npm ci
                 - npm install wait-on
                 - npm install pm2
@@ -40,3 +42,6 @@ test:
         files:
             - "**/*.png"
             - "**/*.mp4"
+cache:
+    paths:
+        - public/**/*
