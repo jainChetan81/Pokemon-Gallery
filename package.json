@@ -4,15 +4,15 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "next build && next export",
 		"start": "next start",
 		"lint": "next lint",
-		"test": "jest  --coverage",
+		"test:jest": "jest  --coverage",
 		"test:watch": "jest --watchAll --verbose --coverage",
 		"cypress": "cypress open",
-		"cypress:headless": "cypress run",
+		"test:cypress": "cypress run",
 		"e2e": "start-server-and-test start http://localhost:3000 cypress",
-		"e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless"
+		"e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless",
 	},
 	"dependencies": {
 		"@types/node": "9.6.7",
