@@ -13,7 +13,6 @@ module.exports = withPWA({
 		minimumCacheTTL: 60,
 		disableStaticImages: true,
 	},
-	distDir: "build",
 	async exportPathMap(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
 		return {
 			"/": { page: "/" },
