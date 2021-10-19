@@ -20,7 +20,7 @@
 		"cypress": "^8.6.0",
 		"eslint-plugin-cypress": "^2.12.1",
 		"mochawesome": "^6.3.1",
-		"next": "^11.1.0",
+		"next": "^10.0.5",
 		"next-optimized-images": "^2.6.2",
 		"next-pwa": "^5.3.1",
 		"next-themes": "0.0.15",
