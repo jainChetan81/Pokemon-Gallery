@@ -10,8 +10,8 @@ module.exports = withPWA({
 	reactStrictMode: true,
 	images: {
 		domains: ["res.imagekit.io", "assets.pokemon.com"],
-		loader: "imgix",
-		path: "/",
+		// loader: "imgix",
+		// path: "/",
 		minimumCacheTTL: 60,
 		disableStaticImages: true,
 	},
