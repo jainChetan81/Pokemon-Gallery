@@ -69,8 +69,6 @@ export default Home;
 // TODO: do react testing  with typescript
 // TODO: use swr for pre fetching data
 // TODO: tdd while using framer-motion
-// TODO: deploy on amplify with e2e and tests
 // TODO: research for next-offline
 // TODO: research for next-page-transitions
-// TODO: create a CI/CD pipeline for deploying to AWS
 // TODO: add google analytics
