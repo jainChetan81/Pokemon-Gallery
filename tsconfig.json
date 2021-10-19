@@ -14,6 +14,20 @@
 		"isolatedModules": true,
 		"jsx": "preserve"
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.js", "**/*.tsx", "__tests__/*", "jest.setup.js"],
-	"exclude": ["node_modules", "package-lock.json"]
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"exclude": [
+		"node_modules",
+		"package-lock.json",
+		".vscode",
+		"amplify",
+		"jest.setup.js",
+		"**/*.js",
+		"public",
+		".next",
+		"build",
+		"coverage",
+		"cypress",
+		"images",
+		"styles"
+	]
 }

@@ -21,7 +21,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-pokedoxgallery-dev-140048-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
         "logicalId": "hostingamplifyhosting"
       },
-      "lastPushTimeStamp": "2021-10-18T12:49:04.223Z",
+      "lastPushTimeStamp": "2021-10-18T13:17:34.074Z",
       "output": {},
       "lastPushDirHash": "e1evW+qiqAiMlhCE8d9YaQTXPPg="
     }
