@@ -10,14 +10,17 @@ module.exports = withPWA({
 	reactStrictMode: true,
 	images: {
 		domains: ["res.imagekit.io", "assets.pokemon.com"],
+		loader: "imgix",
+		path: "/",
 		minimumCacheTTL: 60,
 		disableStaticImages: true,
 	},
 	async exportPathMap(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
 		return {
 			"/": { page: "/" },
-			"/menu": { page: "/menu" },
-			"/about": { page: "/about" },
+			"/404": { page: "/404" },
+			"/_offline": { page: "/_offline" },
+			"/[id]": { page: "/pokemon/[id]" },
 		};
 	},
 });
