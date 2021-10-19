@@ -14,4 +14,11 @@ module.exports = withPWA({
 		disableStaticImages: true,
 	},
 	distDir: "build",
+	async exportPathMap(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
+		return {
+			"/": { page: "/" },
+			"/menu": { page: "/menu" },
+			"/about": { page: "/about" },
+		};
+	},
 });

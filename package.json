@@ -4,16 +4,14 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build && next export",
+		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
 		"test": "jest  --coverage",
 		"test:jest": "jest  --coverage",
 		"test:watch": "jest --watchAll --verbose --coverage",
 		"cypress": "cypress open",
-		"test:cypress": "cypress run",
-		"e2e": "start-server-and-test start http://localhost:3000 cypress",
-		"e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless"
+		"test:cypress": "cypress run"
 	},
 	"dependencies": {
 		"@types/node": "9.6.7",
@@ -21,7 +19,9 @@
 		"axios": "^0.22.0",
 		"cypress": "^8.6.0",
 		"eslint-plugin-cypress": "^2.12.1",
+		"mochawesome": "^6.3.1",
 		"next": "^11.1.0",
+		"next-optimized-images": "^2.6.2",
 		"next-pwa": "^5.3.1",
 		"next-themes": "0.0.15",
 		"prop-types": "^15.7.2",
