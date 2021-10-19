@@ -7,7 +7,7 @@ frontend:
         build:
             commands:
                 # This makes sure that the commit is not deployed if the tests fail.
-                - npm run test && npm run build
+                - npm run test && npm run cypress && npm run build
     artifacts:
         baseDirectory: build
         files:

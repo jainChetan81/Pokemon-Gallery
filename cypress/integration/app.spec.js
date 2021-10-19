@@ -24,7 +24,7 @@ describe("check for basic tests", () => {
 		cy.contains("h1", /bulbasaur/i);
 		cy.get("img").should("have.attr", "alt");
 	});
-	it("going back t homepage", () => {
+	it("going back to homepage", () => {
 		cy.visit("/pokemon/1");
 		cy.contains("p", /home/i).click();
 		cy.url().should("include", "/");
