@@ -7,10 +7,11 @@ module.exports = withPWA({
 		skipWaiting: true,
 		disable: process.env.NODE_ENV === "development",
 	},
+	future: { webpack5: true },
 	reactStrictMode: true,
 	images: {
 		domains: ["res.imagekit.io", "assets.pokemon.com"],
-		// loader: "imgix",
+		// loader: "default",//default, imgix, cloudinary, akamai, custom
 		// path: "/",
 		minimumCacheTTL: 60,
 		disableStaticImages: true,
