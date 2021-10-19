@@ -7,7 +7,6 @@ module.exports = withPWA({
 		skipWaiting: true,
 		disable: process.env.NODE_ENV === "development",
 	},
-	future: { webpack5: true },
 	reactStrictMode: true,
 	images: {
 		domains: ["res.imagekit.io", "assets.pokemon.com"],
@@ -24,4 +23,5 @@ module.exports = withPWA({
 			"/[id]": { page: "/pokemon/[id]" },
 		};
 	},
+	webpack5: true,
 });
