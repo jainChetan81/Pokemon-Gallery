@@ -58,7 +58,7 @@ export async function getStaticProps() {
 		const firstPokemons: Pokemon[] = await getPokemons(0, POKEMON_FIRST_LIMIT);
 		return {
 			props: { firstPokemons },
-			revalidate: 100,
+			revalidate: 10000,
 		};
 	} catch (err) {
 		console.error(err);

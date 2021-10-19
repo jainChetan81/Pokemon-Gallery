@@ -53,7 +53,7 @@ export async function getStaticProps({ params }: any) {
 		const pokeman: any = await getPokemonDetail(id);
 		return {
 			props: { pokeman },
-			revalidate: 100,
+			revalidate: 10000,
 		};
 	} catch (err) {
 		console.error(err);

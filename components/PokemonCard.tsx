@@ -17,7 +17,7 @@ const PokemonCard = ({ name, image, index }: Pokemon) => {
 			}}
 		>
 			<Link href={`/pokemon/${index + 1}`}>
-				<a aria-label={`Go tp ${name} details`}>{showName && <h2>{name}</h2>}</a>
+				<a aria-label={`Go to ${name} details`}>{showName && <h2>{name}</h2>}</a>
 			</Link>
 		</article>
 	);

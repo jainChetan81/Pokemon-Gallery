@@ -14,8 +14,8 @@ describe("check for basic tests", () => {
 	});
 	it("hovering on any pokemon card", () => {
 		cy.get("[data-testid='pokemon']").first().trigger("mouseover");
-		cy.contains("h2", /bulbasaur/i).click();
-		cy.url().should("include", "/pokemon/1");
+		cy.get("a[aria-label='Go to bulbasaur details']").click();
+		cy.url().should("include", "pokemon/1");
 		cy.contains("h1", /bulbasaur/i);
 		cy.get("img").should("have.attr", "alt");
 	});
