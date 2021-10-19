@@ -13,6 +13,7 @@ class MyDocument extends Document {
 					<meta name="format-detection" content="telephone=no" />
 					<meta name="mobile-web-app-capable" content="yes" />
 					<meta name="apple-mobile-web-app-capable" content="yes" />
+					<meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 					<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 					<meta name="apple-mobile-web-app-title" content="Pokedox App" />
 					<link

@@ -9,11 +9,24 @@
 	"name": "Pokedox App",
 	"short_name": "pokedox",
 	"description": "A gallery of various Pokemons",
+	"screenshots": [
+		{
+			"src": "https://ik.imagekit.io/aqaseg5nkl6/pokeball.png?tr=w-512W,h-512W,f-png",
+			"type": "image/png",
+			"sizes": "200x200"
+		}
+	],
 	"icons": [
 		{
 			"src": "https://ik.imagekit.io/aqaseg5nkl6/pokeball.png?tr=w-192,h-192,f-png",
 			"sizes": "192x192",
 			"type": "image/png"
+		},
+		{
+			"src": "https://ik.imagekit.io/aqaseg5nkl6/pokeball.png?tr=w-192,h-192,f-png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "maskable"
 		},
 		{
 			"src": "https://ik.imagekit.io/aqaseg5nkl6/pokeball.png?tr=w-256,h-256,f-png",

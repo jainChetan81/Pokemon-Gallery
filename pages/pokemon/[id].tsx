@@ -38,7 +38,9 @@ const PokemonDetails: FC<Props> = ({ pokeman }) => {
 				))}
 				<p className="mt-10 text-center">
 					<Link href="/">
-						<a className="text-2xl underline">Home</a>
+						<a className="text-2xl underline" aria-label="Go to Home">
+							Home
+						</a>
 					</Link>
 				</p>
 			</div>
