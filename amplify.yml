@@ -16,10 +16,14 @@ frontend:
     cache:
         paths:
             - node_modules/**/*
+
+
+
+
 # version: 0.1
 # frontend:
 #     phases:
-#         preBuild:
+#         preTest:
 #             commands:
 #                 - npm cache clean
 #                 - npm ci
@@ -45,3 +49,4 @@ frontend:
 # cache:
 #     paths:
 #         - public/**/*
+
