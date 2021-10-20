@@ -70,4 +70,3 @@ export default Home;
 // TODO: tdd while using framer-motion
 // TODO: research for next-offline
 // TODO: research for next-page-transitions
-// TODO: add google analytics

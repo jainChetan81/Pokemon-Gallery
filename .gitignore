@@ -12,6 +12,7 @@
 /.next/
 /build/
 /out/
+**/.vscode/**
 
 #PWA
 sw.js
