@@ -14,25 +14,24 @@ frontend:
     cache:
         paths:
             - node_modules/**/*
-test:
-    phases:
-        preTest:
-            commands:
-                - npm ci
-                - npm install wait-on
-                - npm install pm2
-                - npx pm2 start npm -- start
-                - "npx wait-on http://localhost:3000"
-        test:
-            commands:
-                - npm run test:mocha-reporter
-        postTest:
-            commands:
-                - npm run test:mocha-report
-                - npx pm2 kill
-    artifacts:
-        baseDirectory: cypress
-        configFilePath: "**/mochawesome.json"
-        files:
-            - "**/*.png"
-            - "**/*.mp4"
+# test:
+#     phases:
+#         preTest:
+#             commands:
+#                 - npm ci
+#                 - npm install wait-on
+#                 - npm run pm2:start
+#                 - "npx wait-on http://localhost:3000"
+#         test:
+#             commands:
+#                 - npm run test:mocha-reporter
+#         postTest:
+#             commands:
+#                 - npm run test:mocha-report
+#                 - npm run pm2:kill
+#     artifacts:
+#         baseDirectory: cypress
+#         configFilePath: "**/mochawesome.json"
+#         files:
+#             - "**/*.png"
+#             - "**/*.mp4"

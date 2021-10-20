@@ -1,6 +1,9 @@
+/* eslint-disable no-restricted-globals */
 import Head from "next/head";
 import PropTypes from "prop-types";
+import { ErrorBoundary } from "react-error-boundary";
 import { LayoutType } from "../types";
+import Modal from "./Modal";
 import Header from "./Header";
 
 function Home({ title, keywords, description, children }: LayoutType) {
@@ -16,14 +19,16 @@ function Home({ title, keywords, description, children }: LayoutType) {
 				<link rel="manifest" href="manifest.json" />
 			</Head>
 			<Header title="Pokemon Gallery" />
-			<main className="container mx-auto">{children}</main>
+			<ErrorBoundary FallbackComponent={() => <Modal show onClose={() => location.reload()} />}>
+				<main className="container mx-auto">{children}</main>
+			</ErrorBoundary>
 		</>
 	);
 }
 Home.defaultProps = {
 	title: "Pokedox App",
 	description: "A gallery of various Pokemons",
-	keywords: "[NextJs, Pokemon, Tailwind, Axios, Jest, Cypress, React Testing Library]",
+	keywords: "[NextJs, Pokemon, Tailwind, Axios, Jest, Cypress, React Testing Library, SWR]",
 };
 Home.propTypes = {
 	title: PropTypes.string,

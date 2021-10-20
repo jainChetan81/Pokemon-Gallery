@@ -67,7 +67,6 @@ export async function getStaticProps() {
 export default Home;
 
 // TODO: do react testing  with typescript
-// TODO: use swr for pre fetching data
 // TODO: tdd while using framer-motion
 // TODO: research for next-offline
 // TODO: research for next-page-transitions

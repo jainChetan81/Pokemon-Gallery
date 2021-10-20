@@ -18,7 +18,6 @@ export default function usePagination(
 		if (offset === 0) return;
 		setLoading(true);
 		setError(false);
-		// TODO: implement swr for pre fetching data
 		getPokemons(offset, limit)
 			.then((pokemons: Pokemon[]): void => {
 				setPokemons([...currentPokemons, ...pokemons]);
@@ -30,6 +29,7 @@ export default function usePagination(
 				setError(true);
 				setLoading(false);
 			});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [offset]);
 
 	return { loading, error, hasMore };

@@ -12,7 +12,7 @@ module.exports = withPWA({
 		domains: ["res.imagekit.io", "assets.pokemon.com"],
 		// loader: "default",//default, imgix, cloudinary, akamai, custom
 		// path: "/",
-		minimumCacheTTL: 60,
+		minimumCacheTTL: 3600,
 		disableStaticImages: true,
 	},
 	async exportPathMap(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
