@@ -15,7 +15,8 @@ frontend:
         paths:
             - node_modules/**/*
             - ~/.cache
-            - /root/.cache/Cypress
+            - /root/.cache/Cypress/**
+            - ~/root/.cache/Cypress/**
 
 test:
     artifacts:
@@ -33,7 +34,7 @@ test:
         test:
             commands:
                 - npm run test
-                - "npm run test:mocha-reporter"
+                - "npx cypress run --reporter mochawesome --reporter-options 'reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss'"
         postTest:
             commands:
-                - npm run test:mocha-report
+                - npx mochawesome-merge cypress/report/mochawesome-report/mochawesome*.json > cypress/report/mochawesome.json
