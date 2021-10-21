@@ -13,7 +13,7 @@
 		"test:cypress": "cypress run",
 		"test:mocha-reporter": "cypress run --reporter mochawesome --reporter-options 'reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss'",
 		"test:mocha-report": "mochawesome-merge cypress/report/mochawesome-report/mochawesome*.json > cypress/report/mochawesome.json",
-		"test:static": "npm run lint && npm run tsc",
+		"test:static": "npm run lint",
 		"test:e2e": "(amplify mock api &) && wait-on http-get://localhost:20002 && kill-port 3000 && (npm run dev &) && wait-on http-get://localhost:3000 && cypress run --env PORT=3000",
 		"test:e2e:dev": "(amplify mock api &) && wait-on http-get://localhost:20002 && kill-port 3000 && (npm run dev &) && wait-on http-get://localhost:3000 && cypress open --env PORT=3000",
 		"test": "npm run test:static && npm run test:jest"
