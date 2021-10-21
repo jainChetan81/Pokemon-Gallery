@@ -34,11 +34,11 @@ public/sw.js.map
 
 # cypress files
 **/results/**
-**/videos/**
-**/screenshots/**
-**/report/**
+# **/videos/**
+# **/screenshots/**
+# **/report/**
 **/coverage/**
-**/mochawesome-report/**
+# **/mochawesome-report/**
 
 # vscode
 /.vscode/

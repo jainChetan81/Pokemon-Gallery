@@ -17,6 +17,7 @@ frontend:
             - ~/.cache
             - /root/.cache/Cypress/**
             - ~/root/.cache/Cypress/**
+            - ~/node_modules/cypress/cache/Cypress
 
 test:
     artifacts:
@@ -31,11 +32,10 @@ test:
                 - npm install
                 - npm install wait-on
                 - npm install cypress
-                # - .\node_modules\.bin\cypress.cmd install --force
                 - "npm run dev & npx wait-on http://localhost:3000"
         test:
             commands:
-                # - npm run test
+                - npm run test
                 - "npx cypress run --reporter mochawesome --reporter-options 'reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss'"
         postTest:
             commands:

@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-10-20T21:05:33.574Z",
+    "end": "2021-10-20T21:06:10.962Z",
+    "duration": 37388,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "92d10abd-2831-4e7c-85b1-eeae03766c51",
+      "title": "",
+      "fullFile": "cypress/integration/app.spec.js",
+      "file": "cypress/integration/app.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3bc2c6c7-7d8c-48cc-8f90-45b7f039b050",
+          "title": "check for basic tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "elements present on the Home page",
+              "fullTitle": "check for basic tests elements present on the Home page",
+              "timedOut": null,
+              "duration": 9167,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Start from the Home page\ncy.contains(\"h1\", /Pokemon Gallery/i);\ncy.get(\"[data-testid='pokemon-card']\").should(\"have.length\", 30);\ncy.scrollTo(\"bottom\");\ncy.get(\"[data-testid='pokemon-card']\").should(\"have.length\", 60);",
+              "err": {},
+              "uuid": "ce1b41ef-570c-4dc9-b0f3-115a9ea0c5bb",
+              "parentUUID": "3bc2c6c7-7d8c-48cc-8f90-45b7f039b050",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "hovering on any pokemon card",
+              "fullTitle": "check for basic tests hovering on any pokemon card",
+              "timedOut": null,
+              "duration": 12037,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"[data-testid='pokemon-card']\").first().trigger(\"mouseover\");\ncy.get(\"a[aria-label='Go to bulbasaur details']\").click(); // eslint-disable-next-line cypress/no-unnecessary-waiting\ncy.wait(8000);\ncy.url().should(\"include\", \"pokemon/1\");\ncy.contains(\"h1\", /bulbasaur/i);\ncy.get(\"img\").should(\"have.attr\", \"alt\");",
+              "err": {},
+              "uuid": "c579d434-6e0e-4929-8784-d065dc23d5d4",
+              "parentUUID": "3bc2c6c7-7d8c-48cc-8f90-45b7f039b050",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "on first pokemon details page",
+              "fullTitle": "check for basic tests on first pokemon details page",
+              "timedOut": null,
+              "duration": 8645,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/pokemon/1\");\ncy.contains(\"h1\", /bulbasaur/i);\ncy.get(\"img\").should(\"have.attr\", \"alt\");",
+              "err": {},
+              "uuid": "c9c8b864-308a-4a1f-98f8-67e3e3256ab9",
+              "parentUUID": "3bc2c6c7-7d8c-48cc-8f90-45b7f039b050",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "going back to homepage",
+              "fullTitle": "check for basic tests going back to homepage",
+              "timedOut": null,
+              "duration": 7350,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/pokemon/1\");\ncy.contains(\"p\", /home/i).click();\ncy.url().should(\"include\", \"/\");",
+              "err": {},
+              "uuid": "e8c3e593-b85c-4727-a61d-6bee08226575",
+              "parentUUID": "3bc2c6c7-7d8c-48cc-8f90-45b7f039b050",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ce1b41ef-570c-4dc9-b0f3-115a9ea0c5bb",
+            "c579d434-6e0e-4929-8784-d065dc23d5d4",
+            "c9c8b864-308a-4a1f-98f8-67e3e3256ab9",
+            "e8c3e593-b85c-4727-a61d-6bee08226575"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 37199,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "'reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss'"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
