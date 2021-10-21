@@ -30,6 +30,7 @@ test:
             commands:
                 - npm install
                 - npm install wait-on
+                - npm install cypress
                 - "npm run dev & npx wait-on http://localhost:3000"
         test:
             commands:
