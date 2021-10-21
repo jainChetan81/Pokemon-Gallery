@@ -25,6 +25,8 @@
 	"dependencies": {
 		"@types/node": "9.6.7",
 		"@types/react": "^17.0.29",
+		"@aws-amplify/api": "^1.0.42",
+		"@aws-amplify/pubsub": "^1.1.0",
 		"axios": "^0.22.0",
 		"cypress": "^8.6.0",
 		"eslint-plugin-cypress": "^2.12.1",
@@ -45,6 +47,7 @@
 		"@types/react-dom": "^17.0.9",
 		"babel-eslint": "^10.1.0",
 		"babel-jest": "^27.2.5",
+		"wait-on": "^3.3.0",
 		"eslint": "^7.32.0",
 		"eslint-config-airbnb": "^18.2.1",
 		"eslint-config-next": "11.1.2",
