@@ -10,8 +10,6 @@ module.exports = withPWA({
 	reactStrictMode: true,
 	images: {
 		domains: ["res.imagekit.io", "assets.pokemon.com"],
-		// loader: "default",//default, imgix, cloudinary, akamai, custom
-		// path: "/",
 		minimumCacheTTL: 3600,
 		disableStaticImages: true,
 	},
@@ -23,5 +21,6 @@ module.exports = withPWA({
 			"/[id]": { page: "/pokemon/[id]" },
 		};
 	},
+	swcMinify: true,
 	webpack5: true,
 });
