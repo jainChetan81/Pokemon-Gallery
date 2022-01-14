@@ -91,8 +91,8 @@ To build this project with static pages without edge functions where Server Side
 **tailwindcss** - for css utilities and JIT compiler
 
 ## Project Structure
-    --- ## components 
-    --- ## pages  
+    --- ## components
+    --- ## pages
     --- ## styles
     --- ## .eslint.json
     --- ## jest.config.js
@@ -148,7 +148,7 @@ I am a Full Stack Web Developer with over two years of experience in various tec
 To run tests with unit testing and end to end testing and finally a report, run the following command
 
 ```bash
-  npm run test:jest
+  npm run test
   npm run test:cypress
   test:mocha-report
 ```
